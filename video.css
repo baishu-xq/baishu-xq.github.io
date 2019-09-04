@@ -42,8 +42,14 @@ ul:after {
   content: ".";
 }
 
-.fl, .fr {
+.fr {
   display: block;
+  float: right;
+}
+
+.fl {
+  display: block;
+  float: left;
 }
 
 a {
@@ -476,25 +482,90 @@ footer .footer-bot .s-nav a, footer .footer-bot .s-nav span {
   display: inline-block;
 }
 
-.i-ban {
+.f-blank {/*导航栏和第一个标题之间的空白区域*/
+  width: 1060px;
+  position: relative;
+  /*overflow: hidden;*/
+  height: 10px;
+  z-index: 2;
+}
+.f-blank1 {/*导航栏和第一个标题之间的空白区域*/
+  width: 1060px;
+  position: relative;
+  /*overflow: hidden;*/
+  height: 51px;
+  z-index: 2;
+}
+
+.first-block {/*第一个整体的块*/
+    width: 1000px;
+    margin: 1px auto 0;
+}
+
+.f-title {/*第一个标题*/
+  font-size: 37px;
+  text-align: center;
+  color: #333333;
   width: 100%;
   position: relative;
   /*overflow: hidden;*/
-  height: 718px;
+  height: 40px;
+  z-index: 2;
+}
+
+.english {/*英语表达*/
+  font-size: 13px;
+  text-align: center;
+  color: #999999;
+  width: 100%;
+  position: relative;
+  /*overflow: hidden;*/
+  height: 25px;
+  margin-top: 20px;
+  z-index: 2;
+}
+
+.more {/*右下角的更多视频*/
+  font-size: 16px;
+  text-align: right;
+  color: #999;
+  width: 1060px;
+  position: relative;
+  /*overflow: hidden;*/
+  height: 25px;
+  z-index: 2;
+}
+
+.i-ban {
+  width: 100%;
+  position: relative;
+  /*overflow: hidden;
+  height: 100%;*/
   z-index: 2;
 }
 .i-ban ul {
   width: 100%;
   height: 100%;
 }
-.i-ban li {
-  width: 100%;
-  height: 100%;
+.i-ban li {/*图片的大小尺寸*/
+  width: 87%;
+  height: 57%;
+  /*width:400px;一定要制定一个宽度*/
+  float:left; /*这是让所有div标签左浮动*/
   position: absolute;
   left: 0;
   top: 0;
   display: none;
 }
+
+.introduce{/*介绍文字所占的左右上下宽度高度*/
+  width: 100%;
+  font-size: 16px;
+  line-height: 30px;
+  color: #777;
+  padding: 9px 0;/*介绍文字的上下高度*/
+}
+
 .i-ban li a{
   display: block;
   width: 100%;
@@ -528,13 +599,15 @@ footer .footer-bot .s-nav a, footer .footer-bot .s-nav span {
   width: 138px;
   line-height: 76px;/*介绍文字标题的高低*/
 }
-.i-ban li .cont-box .bg{
+/*
+.i-ban li .cont-box .bg{介绍的文字框的大小和透明度
   display: block;
   width: 100%;
   height: 100%;
   opacity: 0.9;
   filter: alpha(opacity=90);
 }
+*/
 .i-ban li.li0 .cont-box .bg{
   background-color: #2dafb4;
 }
@@ -2256,7 +2329,7 @@ footer .footer-bot .s-nav a, footer .footer-bot .s-nav span {
 /*********************PC鍝嶅簲*******************/
 @media (max-width: 1500px) {
   .i-ban {
-    height: 600px;
+    height: 250px;
   }
 }
 
